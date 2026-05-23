@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: #F5F5F5
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Oxanium';
+}
+a, link, div, p, span{
+  font-family: 'Ubuntu Sans Mono';
+}
