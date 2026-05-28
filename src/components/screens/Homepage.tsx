@@ -20,6 +20,10 @@ import githubIcon from "../../assets/socialMedia/github.svg";
 import instIcon from "../../assets/socialMedia/inst.svg";
 import telegramIcon from "../../assets/socialMedia/telegram.svg";
 
+import { Search, Download } from "lucide-react";
+import PrimaryButton from "../functionalElements/PrimaryButton";
+import SecondaryButton from "../functionalElements/SecondaryButton";
+
 export default function Homepage() {
   const socialMedia = [
     {
@@ -120,14 +124,24 @@ export default function Homepage() {
               className="absolute top-100 left-190 rotate-[-8deg] w-15 h-15"
             />
           </div>
-          <div className="w-full absolute bottom-6 flex justify-between">
-            <div className="flex flex-col text-center md:text-left">
+          <div className="w-full absolute bottom-6 flex justify-between z-20">
+            <div className="flex flex-col text-center md:text-left md:w-[33%]">
               <h3 className="text-[24px] font-bold">Yana Zubal</h3>
               <p className="text-[14px] font-light">
                 Full-stack web dev, UI/UX designer
               </p>
             </div>
-            <div className="flex items-center gap-x-6">
+            <div className="md:w-[33%] flex justify-center gap-x-4">
+              <SecondaryButton
+              Icon={Download}
+              text="Download CV"
+              />
+              <PrimaryButton
+              Icon={Search}
+              text="Discover"
+              />
+            </div>
+            <div className="md:w-[33%] flex justify-end items-center gap-x-6">
               {socialMedia.map((media, index) => (
                 <a
                   href={media.link}
@@ -144,6 +158,7 @@ export default function Homepage() {
               ))}
             </div>
           </div>
+          <div className="w-full absolute bottom-0 h-[20%] bg-gradient-to-t from-[#121212] to-transparent" />
         </div>
       </div>
     </div>
