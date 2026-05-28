@@ -2,7 +2,7 @@ const links = ["About Me", "Projects", "Experiences", "Technologies"];
 
 export default function Navigation() {
   return (
-    <div className="w-full flex items-center justify-end gap-x-7">
+    <div className="w-full md:flex items-center justify-end gap-x-7 hidden">
       {links.map((link, index) => (
         <a
           key={index}

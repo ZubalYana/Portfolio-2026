@@ -44,7 +44,7 @@ export default function Homepage() {
   ];
 
   return (
-    <div className="w-full md:h-screen p-[20px] lg:p-[40px]">
+    <div className="w-full h-screen p-[20px] lg:p-[40px]">
       <HomepageBg />
       <div className="relative z-10">
         <Navigation />
@@ -52,7 +52,7 @@ export default function Homepage() {
           <img
             src={portfolioPhoto}
             alt="portfolio photo"
-            className="lg:w-[350px] lg:h-[515px] opacity-[0.9]"
+            className="w-[70%] lg:w-[350px] lg:h-[515px] opacity-[0.9]"
           />
           <div>
             {/* <motion.img
@@ -124,8 +124,8 @@ export default function Homepage() {
               className="absolute top-100 left-190 rotate-[-8deg] w-15 h-15"
             />
           </div>
-          <div className="w-full absolute bottom-6 flex justify-between z-20">
-            <div className="flex flex-col text-center md:text-left md:w-[33%]">
+          <div className="w-full absolute bottom-6 flex flex-col md:flex-row justify-between z-20">
+            <div className="w-full flex flex-col text-center md:text-left md:w-[33%]">
               <h3 className="text-[24px] font-bold">Yana Zubal</h3>
               <p className="text-[14px] font-light">
                 Full-stack web dev, UI/UX designer

@@ -22,7 +22,7 @@ export default function AboutMe() {
         }
     ]
   return (
-    <motion.div className="w-screen md:h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px]">
+    <motion.div className="w-screen md:h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
       <h1 className="uppercase font-bold text-[32px]">
         About me<span className="text-[#008CFF]">.</span>
       </h1>
@@ -52,8 +52,8 @@ export default function AboutMe() {
             on time management: I kept a part-time job while finishing school
             and sitting my final exams, which I'm quietly proud of.
           </p>
-          <div className="w-full flex flex-col md:flex-row mt-4">
-            <div className="w-[50%] flex flex-col">
+          <div className="w-full flex flex-col gap-y-6 md:gap-y-0 md:flex-row mt-6 md:mt-4">
+            <div className="w-full md:w-[50%] flex flex-col">
               <div className="flex gap-x-3 items-center">
                 <div className="w-[35px] h-[35px] p-2 rounded-[8px] bg-[#008CFF]/20">
                   <GraduationCap className="w-full h-full text-[#008CFF]" />
@@ -77,7 +77,7 @@ export default function AboutMe() {
                 </p>
               </div>
             </div>
-            <div className="w-[50%] flex flex-col">
+            <div className="w-full md:w-[50%] flex flex-col">
               <div className="flex gap-x-3 items-center">
                 <div className="w-[35px] h-[35px] p-2 rounded-[8px] bg-[#008CFF]/20">
                   <Code2Icon className="w-full h-full text-[#008CFF]" />
@@ -111,7 +111,7 @@ export default function AboutMe() {
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col mt-4">
+          <div className="w-full flex flex-col mt-6 md:mt-4">
             <div className="flex gap-x-3 items-center">
                 <div className="w-[35px] h-[35px] p-2 rounded-[8px] bg-[#008CFF]/20">
                   <Globe className="w-full h-full text-[#008CFF]" />
@@ -120,7 +120,7 @@ export default function AboutMe() {
                   Languages
                 </h5>
               </div>
-              <div className="w-full flex flex-col md:flex-row md:gap-x-6 mt-4">
+              <div className="w-full flex flex-col flex-wrap md:flex-nowrap md:flex-row md:gap-x-6 mt-4">
               {languages.map((language, index)=>(
                 <div className="w-[150px] flex flex-col gap-y-2 text-left" key={index}>
                     <div className="bg-[#008CFF]/20 w-full h-[6px] rounded-[16px]">
