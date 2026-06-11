@@ -35,7 +35,7 @@ export default function AboutMe() {
           />
         </div>
         <div className="w-full md:h-full md:max-w-[70%] pt-4">
-          <p className="text-[12px] text-left w-full">
+          <p className="text-[12px] text-left w-full text-[#F5F5F5]/80">
             Hey! 👋 I'm Yana, a full-stack web developer & UI/UX designer based
             in Lviv, Ukraine. <br />
             <br />
@@ -62,17 +62,17 @@ export default function AboutMe() {
               </div>
 
               <div className="w-full flex flex-col text-left gap-y-1 mt-2">
-                <p className="font-light text-[12px]">
-                  <span className="font-semibold">2014-2026: </span>School of
+                <p className="font-light text-[12px] text-[#F5F5F5]/80">
+                  <span className="font-semibold text-[#F5F5F5]">2014-2026: </span>School of
                   Shklo ( graduated with honors )
                 </p>
-                <p className="font-light text-[12px]">
-                  <span className="font-semibold">2022-2026: </span>Creator IT
+                <p className="font-light text-[12px] text-[#F5F5F5]/80">
+                  <span className="font-semibold text-[#F5F5F5]">2022-2026: </span>Creator IT
                   Academy ( extended Web Development course, 2 UI/UX design
                   courses )
                 </p>
-                <p className="font-light text-[12px]">
-                  <span className="font-semibold">2026-present: </span>Lviv
+                <p className="font-light text-[12px] text-[#F5F5F5]/80">
+                  <span className="font-semibold text-[#F5F5F5]">2026-present: </span>Lviv
                   Polytechnic National University student
                 </p>
               </div>
@@ -88,8 +88,8 @@ export default function AboutMe() {
               </div>
 
               <div className="w-full flex flex-col text-left gap-y-1 mt-2">
-                <p className="font-light text-[12px]">
-                  <span className="font-semibold">2025-2026: </span>Freelance
+                <p className="font-light text-[12px] text-[#F5F5F5]/80">
+                  <span className="font-semibold text-[#F5F5F5]">2025-2026: </span>Freelance
                   projects within{" "}
                   <a
                     className="text-[#008CFF] cursor-pointer"
@@ -98,8 +98,8 @@ export default function AboutMe() {
                     Creator IT Academy
                   </a>
                 </p>
-                <p className="font-light text-[12px]">
-                  <span className="font-semibold">2025-present: </span>Part-time
+                <p className="font-light text-[12px] text-[#F5F5F5]/80">
+                  <span className="font-semibold text-[#F5F5F5]">2025-present: </span>Part-time
                   cooperation with{" "}
                   <a
                     className="text-[#008CFF] cursor-pointer"
@@ -126,8 +126,8 @@ export default function AboutMe() {
                     <div className="bg-[#008CFF]/20 w-full h-[6px] rounded-[16px]">
                     <div className="bg-[#008CFF] h-full rounded-[16px]" style={{width: `${language.fillingPercantage}%`}}></div>
                     </div>
-                    <p className="text-[12px] font-light">
-                        {language.language}: <span className="font-semibold">{language.level}</span>
+                    <p className="text-[12px] font-light text-[#F5F5F5]/80">
+                        {language.language}: <span className="font-semibold text-[#F5F5F5]">{language.level}</span>
                     </p>
                 </div>
               ))}

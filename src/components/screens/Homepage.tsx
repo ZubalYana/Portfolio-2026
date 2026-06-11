@@ -127,7 +127,7 @@ export default function Homepage() {
           <div className="w-full absolute bottom-6 flex flex-col md:flex-row justify-between z-20">
             <div className="w-full flex flex-col text-center md:text-left md:w-[33%]">
               <h3 className="text-[24px] font-bold">Yana Zubal</h3>
-              <p className="text-[14px] font-light">
+              <p className="text-[14px] font-light text-[#F5F5F5]/45">
                 Full-stack web dev, UI/UX designer
               </p>
             </div>
