@@ -22,7 +22,7 @@ import telegramIcon from "../../assets/socialMedia/telegram.svg";
 
 import { Search, Download } from "lucide-react";
 import PrimaryButton from "../functionalElements/PrimaryButton";
-import SecondaryButton from "../functionalElements/SecondaryButton";
+import DownloadCVButton from "../functionalElements/DownloadCVButton";
 
 export default function Homepage() {
   const socialMedia = [
@@ -132,7 +132,7 @@ export default function Homepage() {
               </p>
             </div>
             <div className="md:w-[33%] flex justify-center gap-x-4">
-              <SecondaryButton
+              <DownloadCVButton
               Icon={Download}
               text="Download CV"
               />

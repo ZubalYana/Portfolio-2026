@@ -5,7 +5,7 @@ interface SecondaryButtonProps {
   text: string;
 }
 
-export default function SecondaryButton({ Icon, text }: SecondaryButtonProps) {
+export default function DownloadCVButton({ Icon, text }: SecondaryButtonProps) {
   return (
     <a
       href="/CV-2026.pdf"
