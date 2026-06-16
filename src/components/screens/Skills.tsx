@@ -31,7 +31,7 @@ const Skill = ({ name, icon: Icon }: { name: string, icon: SVGComponent, type: s
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="
         group
-        w-[80px] h-[90px] p-2 rounded-[10px]
+        w-[85px] h-[90px] p-2 rounded-[10px]
         bg-[#F5F5F5]/5 border border-transparent
         hover:border-[#008CFF]/20
         hover:bg-[#008CFF]/5
@@ -52,7 +52,7 @@ const Skill = ({ name, icon: Icon }: { name: string, icon: SVGComponent, type: s
           "
         />
       </div>
-      <p className="text-[12px] text-[#F5F5F5]/50 group-hover:text-[#F5F5F5]/90 transition-colors duration-200 text-center leading-tight">
+      <p className="text-[12px] text-[#F5F5F5]/80 group-hover:text-[#F5F5F5]/90 transition-colors duration-200 text-center leading-tight">
         {name}
       </p>
     </motion.div>

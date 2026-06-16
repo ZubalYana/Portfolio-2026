@@ -3,6 +3,7 @@ import Homepage from './components/screens/Homepage'
 import AboutMe from './components/screens/AboutMe'
 import FeaturedProjects from './components/screens/FeaturedProjects'
 import Skills from './components/screens/Skills'
+import Footer from './components/screens/Footer'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <AboutMe/>
     <FeaturedProjects/>
     <Skills/>
+    <Footer/>
     </>
   )
 }
