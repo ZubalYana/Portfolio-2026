@@ -26,12 +26,36 @@ type SVGComponent = FC<SVGProps<SVGSVGElement>>
 
 const Skill = ({ name, icon: Icon }: { name: string, icon: SVGComponent, type: string }) => {
   return (
-    <div className="w-[90px] h-[90px] p-2 rounded-[10px] bg-[#F5F5F5]/5 flex flex-col items-center gap-y-2 m-4">
-      <div className="w-[90%] h-[70%] flex items-center justify-center">
-      <Icon className="w-auto h-full" />
+    <motion.div
+      whileHover={{ y: -6, scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="
+        group
+        w-[80px] h-[90px] p-2 rounded-[10px]
+        bg-[#F5F5F5]/5 border border-transparent
+        hover:border-[#008CFF]/20
+        hover:bg-[#008CFF]/5
+        hover:shadow-[0_0_16px_rgba(0,140,255,0.15)]
+        flex flex-col items-center justify-center gap-y-2
+        cursor-default transition-colors duration-200
+      "
+    >
+      <div className="w-[44px] h-[44px] flex items-center justify-center">
+        <Icon
+          className="
+            w-full h-full
+            opacity-60
+            transition-all duration-200
+            group-hover:opacity-100
+            group-hover:scale-[1.1]
+            group-hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.7))_drop-shadow(0_0_12px_rgba(0,140,255,0.3))]
+          "
+        />
       </div>
-      <p className="text-[14px] text-[#F5F5F5]/70">{name}</p>
-    </div>
+      <p className="text-[12px] text-[#F5F5F5]/50 group-hover:text-[#F5F5F5]/90 transition-colors duration-200 text-center leading-tight">
+        {name}
+      </p>
+    </motion.div>
   )
 }
 export default function Skills() {
@@ -123,16 +147,58 @@ export default function Skills() {
     },
   ];
 
+  const groups: { label: string; type: string }[] = [
+    { label: "Frontend", type: "frontend" },
+    { label: "Backend",  type: "backend"  },
+    { label: "Tools",    type: "tool"     },
+  ];
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.07 },
+    },
+  };
+
+  const cardVariants = {
+    hidden:  { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
   return (
-    <motion.div className="w-screen md:h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+     <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
       <h1 className="uppercase font-bold text-[32px]">
         Skills<span className="text-[#008CFF]">.</span>
       </h1>
-      <div className="w-full flex flex-wrap mt-4 md:mt-6">
-        {skills.map((skill, index)=>(
-          <Skill key={index} name={skill.name} icon={skill.icon} type={skill.type}/>
+
+      <div className="w-full max-w-[900px] flex flex-col gap-y-10 mt-8">
+        {groups.map((group) => (
+          <div key={group.type}>
+            <div className="flex items-center gap-x-3 mb-4">
+              <span className="text-[11px] uppercase tracking-widest text-[#008CFF] font-semibold">
+                {group.label}
+              </span>
+              <div className="flex-1 h-px bg-[#F5F5F5]/10" />
+            </div>
+
+            <motion.div
+              className="flex flex-wrap gap-3 "
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
+              {skills
+                .filter((s) => s.type === group.type)
+                .map((skill, i) => (
+                  <motion.div key={i} variants={cardVariants}>
+                    <Skill name={skill.name} icon={skill.icon} type={skill.type} />
+                  </motion.div>
+                ))}
+            </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
