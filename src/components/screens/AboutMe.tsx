@@ -61,7 +61,7 @@ export default function AboutMe() {
           <img
             src={portfolio_photo2}
             alt="portfolio photo 2"
-            className="w-full h-[300px] md:h-[450px] object-cover object-top rounded-[16px]"
+            className="w-full h-[400px] md:h-[450px] object-cover object-top rounded-[16px]"
           />
         </motion.div>
 

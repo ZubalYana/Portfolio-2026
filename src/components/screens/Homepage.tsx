@@ -74,7 +74,7 @@ export default function Homepage() {
           <motion.img
             src={portfolioPhoto}
             alt="portfolio photo"
-            className="w-[55%] object-cover object-top"
+            className="h-[90%] w-auto object-cover object-top absolute"
             style={{ maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,12 +82,12 @@ export default function Homepage() {
           />
 
           <motion.div
-            className="flex flex-col items-center gap-y-4 text-center"
+            className="flex flex-1 flex-col items-center justify-end gap-y-4 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div>
+            <div className="">
               <h3 className="text-[24px] font-bold">Yana Zubal</h3>
               <p className="text-[14px] font-light text-[#F5F5F5]/45">
                 Full-stack web dev, UI/UX designer
