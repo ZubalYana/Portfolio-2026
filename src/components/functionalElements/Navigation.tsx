@@ -1,10 +1,30 @@
-const links = ["About Me", "Projects", "Experiences", "Technologies"];
+import useScrollToSection from "../helpers/NavigationScroll";
+const links = [
+  {
+    label: "About Me",
+    link: "about",
+  },
+  {
+    label: "Projects",
+    link: "featured-projects",
+  },
+  {
+    label: "Skills",
+    link: "skills",
+  },
+  {
+    label: "FAQ",
+    link: "faq",
+  },
+];
 
 export default function Navigation() {
+  const scrollToSection = useScrollToSection();
+
   return (
     <div className="w-full md:flex items-center justify-end gap-x-7 hidden">
       {links.map((link, index) => (
-        <a
+        <button
           key={index}
           className="
     relative text-[12px] tracking-[0.07em] font-normal
@@ -20,9 +40,10 @@ export default function Navigation() {
     hover:after:left-0 hover:after:right-0
     hover:after:[box-shadow:0_0_6px_rgba(255,255,255,0.5)]
   "
+          onClick={() => scrollToSection(link.link)}
         >
-          {link}
-        </a>
+          {link.label}
+        </button>
       ))}
     </div>
   );

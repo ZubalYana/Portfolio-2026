@@ -17,8 +17,8 @@ function App() {
             <>
               <Homepage />
               <AboutMe />
-              <Skills />
               <FeaturedProjects />
+              <Skills />
             </>
           }
         />

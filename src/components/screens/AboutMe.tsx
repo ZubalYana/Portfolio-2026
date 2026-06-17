@@ -37,7 +37,7 @@ function LanguageBar({ language, level, fillingPercantage, index }: {
 
 export default function AboutMe() {
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <section id="about" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
 
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -146,6 +146,6 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

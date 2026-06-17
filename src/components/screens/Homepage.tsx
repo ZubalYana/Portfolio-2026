@@ -63,7 +63,7 @@ export default function Homepage() {
                 width: icon.size,
                 height: icon.size,
                 transform: `rotate(${icon.rotate}deg)`,
-                opacity: 0.12,
+                opacity: 0.45,
               }}
             />
           ))}

@@ -122,7 +122,7 @@ export interface project {
 
 export default function FeaturedProjects() {
   return (
-    <motion.div className="w-screen md:min-h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <motion.section id="featured-projects" className="w-screen md:min-h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
       <h1 className="uppercase font-bold text-[32px]">
         Featured Projects<span className="text-[#008CFF]">.</span>
       </h1>
@@ -135,6 +135,6 @@ export default function FeaturedProjects() {
         <GithubButton />
         <PrimaryButton Icon={Eye} text="Explore" />
       </div>
-    </motion.div>
+    </motion.section>
   );
 }

@@ -166,7 +166,7 @@ export default function Skills() {
   };
 
   return (
-     <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+     <section id="skills" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
       <h1 className="uppercase font-bold text-[32px]">
         Skills<span className="text-[#008CFF]">.</span>
       </h1>
@@ -199,6 +199,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
