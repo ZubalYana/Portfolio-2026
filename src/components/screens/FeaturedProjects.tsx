@@ -39,7 +39,6 @@ export const projects = [
       "/screenshots/StashifyScreen1.webp",
       "/screenshots/StashifyScreen2.webp",
       "/screenshots/StashifyScreen3.webp",
-      "/screenshots/StashifyScreen4.webp",
       "/screenshots/StashifyScreen5.webp",
     ],
     description_short:
