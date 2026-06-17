@@ -126,7 +126,7 @@ export default function FeaturedProjects() {
       <h1 className="uppercase font-bold text-[32px]">
         Featured Projects<span className="text-[#008CFF]">.</span>
       </h1>
-      <div className="w-full flex justify-between items-center mt-4 md:mt-6">
+      <div className="w-full flex flex-col gap-y-6 md:gap-y-0 md:flex-row justify-between items-center mt-4 md:mt-6">
         {projects.slice(0, 3).map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
