@@ -8,7 +8,7 @@ interface PrimaryButtonProps{
 export default function PrimaryButton({Icon, text}: PrimaryButtonProps){
   return(
     <button className="
-      group px-4 max-h-[50px] flex items-center justify-center gap-x-2
+      group px-4 py-3 max-h-[50px] flex items-center justify-center gap-x-2
       border-2 border-[#008CFF] rounded-[16px] cursor-pointer
       transition-all duration-200
       shadow-[0_0_8px_rgba(0,140,255,0.3)]

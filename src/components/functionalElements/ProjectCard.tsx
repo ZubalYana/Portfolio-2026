@@ -7,9 +7,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="w-full md:w-[32%] h-[420px] p-[15px] rounded-[10px] bg-[#F5F5F5]/5 group hover:bg-[#008CFF]/5 cursor-pointer transition-all duration-200">
+    <div className="w-full md:w-[32%] h-[380px] p-[15px] rounded-[10px] bg-[#F5F5F5]/5 group hover:bg-[#008CFF]/5 cursor-pointer transition-all duration-200">
       {/* a carousel of images on later stages */}
-      <div className="w-full h-[60%] rounded-top-[10px]">
+      <div className="w-full h-[55%] rounded-top-[10px]">
         <img src={project.imagesURLs[0]} alt={`${project.name} screenshot`} />
       </div>
       <div className="w-full mt-2 flex justify-between">

@@ -62,6 +62,8 @@ export const projects = [
   },
 ];
 import ProjectCard from "../functionalElements/ProjectCard";
+import PrimaryButton from "../functionalElements/PrimaryButton";
+import { Eye } from "lucide-react";
 
 export interface project {
   name: string;
@@ -84,6 +86,9 @@ export default function FeaturedProjects() {
         {projects.slice(0, 3).map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
+      </div>
+      <div className="flex mt-4 md:mt-6 gap-x-4">
+          <PrimaryButton Icon={Eye} text="Explore"/>
       </div>
     </motion.div>
   );

@@ -11,7 +11,7 @@ export default function DownloadCVButton({ Icon, text }: SecondaryButtonProps) {
       href="/CV-2026.pdf"
       download="YanaZubalCV.pdf"
       className="
-      group px-4 max-h-[50px] flex items-center justify-center gap-x-2
+      group px-4 py-3 max-h-[50px] flex items-center justify-center gap-x-2
       border-2 border-[#f5f5f5]/70 rounded-[16px] cursor-pointer
       transition-all duration-200
       shadow-[0_0_8px_rgba(245,245,245,0.1)]
