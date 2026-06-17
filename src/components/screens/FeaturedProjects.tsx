@@ -3,7 +3,7 @@ export const projects = [
   {
     name: "Heptagon",
     logo: "/projectsMediafiles/Heptagon/logo.svg",
-    imagesURLs: [""],
+    imagesURLs: ["/HeptagonScreen1.webp", "/HeptagonScreen2.webp", "/HeptagonScreen3.webp"],
     description_short:
       "TO BE REVIEWED: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
     description_extended:
@@ -15,7 +15,7 @@ export const projects = [
   {
     name: "Koloda",
     logo: "/projectsMediafiles/Koloda/logo.svg",
-    imagesURLs: [""],
+    imagesURLs: ["/KolodaScreen1.webp", "/KolodaScreen2.webp", "/KolodaScreen3.webp"],
     description_short:
       "TO BE REVIEWED: A project, made during my first part-time job in Koloda - Ukrainian handmade oak furniture business. Included redesigning their webpage and maintaining it further.",
     description_extended:
@@ -26,7 +26,7 @@ export const projects = [
   {
     name: "Stashify",
     logo: "/projectsMediafiles/Stashify/logo.png",
-    imagesURLs: [""],
+    imagesURLs: ["/StashifyScreen1.webp", "/StashifyScreen2.webp", "/StashifyScreen3.webp", "/StashifyScreen4.webp", "/StashifyScreen5.webp"],
     description_short:
       "TO BE REVIEWED: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
     description_extended:
@@ -42,9 +42,18 @@ export const projects = [
   //     description_extended: "TO BE REWRITTEN: ",
   //     tags: ["", "", "", ""],
   //   },
+    {
+    name: "Editing Factory",
+    imagesURLs: ["/EditingFactoryScreen1.webp", "/EditingFactoryScreen2.webp", "/EditingFactoryScreen3.webp"],
+    description_short: "TO BE REVIEWED: ",
+    description_extended: "TO BE REWRITTEN: ",
+    tags: ["", "", "", ""],
+    projectLink: "https://editing-factory.vercel.app/",
+    repoLink: "",
+  },
   {
     name: "Jidstro",
-    imagesURLs: [""],
+    imagesURLs: ["/JidStroScreen1.webp", "/JidStroScreen2.webp", "/JidStroScreen3.webp"],
     description_short: "TO BE REVIEWED: ",
     description_extended: "TO BE REWRITTEN: ",
     tags: ["", "", "", ""],
@@ -52,14 +61,24 @@ export const projects = [
     repoLink: "",
   },
   {
-    name: "Editing Factory",
-    imagesURLs: [""],
+    name: "StuffPlace",
+    imagesURLs: ["/StuffPlaceScreen1.webp", "/StuffPlaceScreen2.webp", "/StuffPlaceScreen3.webp"],
     description_short: "TO BE REVIEWED: ",
     description_extended: "TO BE REWRITTEN: ",
     tags: ["", "", "", ""],
-    projectLink: "https://editing-factory.vercel.app/",
+    projectLink: "https://stuff-place.netlify.app/",
     repoLink: "",
   },
+    {
+    name: "Sheret",
+    imagesURLs: ["/SheretScreen1.webp", "/SheretScreen2.webp"],
+    description_short: "TO BE REVIEWED: ",
+    description_extended: "TO BE REWRITTEN: ",
+    tags: ["", "", "", ""],
+    projectLink: "https://stuff-place.netlify.app/",
+    repoLink: "",
+  },
+
 ];
 import ProjectCard from "../functionalElements/ProjectCard";
 import PrimaryButton from "../functionalElements/PrimaryButton";
