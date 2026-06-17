@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import githubIcon from "../../assets/socialMedia/github.svg";
 import instIcon from "../../assets/socialMedia/inst.svg";
 import telegramIcon from "../../assets/socialMedia/telegram.svg";
-
+import useScrollToSection from "../helpers/NavigationScroll";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -25,6 +25,7 @@ const ContactRow = ({ href, Icon, label }: { href: string; Icon: typeof Mail; la
 );
 
 export default function Footer() {
+  const scrollToSection = useScrollToSection();
   const socialMedia = [
     { icon: githubIcon,   alt: "Github",    link: "https://github.com/ZubalYana" },
     { icon: telegramIcon, alt: "Telegram",  link: "https://t.me/yanavesq#" },
@@ -32,7 +33,24 @@ export default function Footer() {
   ];
 
   //to actually link once all the pages are ready, + header navigation, too
-  const navLinks = ["About", "Skills", "Projects", "Contact"];
+  const links = [
+  {
+    label: "About Me",
+    link: "about",
+  },
+  {
+    label: "Projects",
+    link: "featured-projects",
+  },
+  {
+    label: "Skills",
+    link: "skills",
+  },
+  {
+    label: "FAQ",
+    link: "faq",
+  },
+];
 
   return (
     <footer className="w-screen border-t border-[#F5F5F5]/10 p-[20px] lg:p-[40px] relative z-10">
@@ -62,14 +80,14 @@ export default function Footer() {
             ))}
           </div>
           <nav className="flex flex-col gap-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+            {links.map((link, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToSection(link.link)}
                 className="text-[13px] text-[#F5F5F5]/40 hover:text-[#F5F5F5]/90 transition-colors duration-200 w-fit"
               >
-                {link}
-              </a>
+                {link.label}
+              </button>
             ))}
           </nav>
           
