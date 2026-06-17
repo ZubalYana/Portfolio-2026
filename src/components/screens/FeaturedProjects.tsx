@@ -133,7 +133,7 @@ export default function FeaturedProjects() {
       </div>
       <div className="flex mt-4 md:mt-6 gap-x-4">
         <GithubButton />
-        <PrimaryButton Icon={Eye} text="Explore" />
+        <PrimaryButton Icon={Eye} text="Explore" link="/projects" />
       </div>
     </motion.section>
   );
