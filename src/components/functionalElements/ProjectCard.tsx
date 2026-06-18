@@ -57,7 +57,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
       className="
-        relative w-full md:w-[32%] flex flex-col h-auto min-h-[380px]
+        relative w-full md:w-[32%] flex flex-col h-auto min-h-[340px]
         rounded-[16px] bg-[#F5F5F5]/5 border border-transparent
         cursor-pointer transition-all duration-300 group
         hover:bg-[#008CFF]/5 hover:border-[#008CFF]/30 hover:-translate-y-1
