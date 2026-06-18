@@ -76,6 +76,7 @@ export const projects = [
   },
   {
     name: "Editing Factory",
+    logo: "/projectsMediafiles/EF/logo.svg",
     imagesURLs: [
       "/screenshots/EditingFactoryScreen1.webp",
       "/screenshots/EditingFactoryScreen2.webp",
@@ -91,6 +92,7 @@ export const projects = [
   },
   {
     name: "Jidstro",
+    logo: "/projectsMediafiles/JidStro/logo.png",
     imagesURLs: [
       "/screenshots/JidStroScreen1.webp",
       "/screenshots/JidStroScreen2.webp",
@@ -106,6 +108,7 @@ export const projects = [
   },
   {
     name: "StuffPlace",
+    logo: "/projectsMediafiles/StuffPlace/logo.svg",
     imagesURLs: [
       "/screenshots/StuffPlaceScreen1.webp",
       "/screenshots/StuffPlaceScreen2.webp",

@@ -93,13 +93,13 @@ export default function ExtendedProjectCard({
           <>
             <button
               onClick={prevImage}
-              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronRight size={20} />
             </button>
@@ -127,7 +127,7 @@ export default function ExtendedProjectCard({
       <div className="w-full lg:w-[45%] flex flex-col text-left">
         <div className="flex items-center gap-x-4">
           {project.logo && (
-            <div className="w-[40px] h-[40px] shrink-0">
+            <div className="w-auto h-[35px] shrink-0">
               <img
                 src={project.logo}
                 alt={`${project.name} logo`}
