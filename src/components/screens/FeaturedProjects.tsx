@@ -13,7 +13,8 @@ export const projects = [
       "A weekly planner I built when nothing else fit my routine. Tracks daily/weekly progress and integrates with Google Calendar.",
     description_extended:
       "I couldn't find a time-management tool that fit my planning routine, so I built my own. Heptagon is a weekly planner that helps you track both daily and overall weekly progress. It integrates with Google Calendar so your events stay visible alongside your tasks. Several friends have ended up using it actively to map out their time.",
-    tags: ["react", "typescript", "node.js", "google api", "mongoDB", "express", "jwt", "bcrypt"],
+    tags: ["react", "typescript", "node.js", "google api"],
+    extended_tags: ["react", "typescript", "node.js", "google api", "mongoDB", "express", "jwt", "bcrypt"],
     projectLink: "https://heptagon-client.onrender.com",
     repoLink: "https://github.com/ZubalYana/heptagon",
   },
@@ -26,7 +27,7 @@ export const projects = [
       "/screenshots/KolodaScreen3.webp",
     ],
     description_short:
-      "Redesigned the Shopify storefront for a Ukrainian furniture brand: custom components, multi-platform reviews, plus product catalogs and infographics.",
+      "Redesigned the Shopify storefront for a Ukrainian furniture brand: custom components, multi-platform reviews, product catalogs.",
     description_extended:
       "Koloda is a Ukrainian handcraft furniture company I've been working with long-term. I completely redesigned their Shopify storefront, built custom components, and integrated reviews from multiple platforms — after which the site started receiving its first orders. Beyond the webpage, I've also designed product catalogs and infographics tailored to the company's needs.",
     tags: ["Shopify", "Shattle", "SEO", "Figma", "Design"],
@@ -45,7 +46,8 @@ export const projects = [
       "A snippet manager for devs, powered by AI to auto-tag, name, and describe your code. Built with SQL + AI API integration.",
     description_extended:
       "Ever needed to save a code snippet for later, only to spend ages rummaging through notes and comments trying to find it? Stashify solves that — a tool for developers to save, group, and label reusable code snippets. It's powered by AI that automatically detects the language and generates a name, description, and tags for each snippet. Built with a SQL database and an AI API integration for a clean, fast experience.",
-    tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun", "Docker"],
+    tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun"],
+    extended_tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun", "Docker", "Express", "Jwt", "Bcrypt"],
     projectLink: "https://stashify-nine.vercel.app/",
     repoLinks: {'frontend': 'https://github.com/ZubalYana/Stashify-client', 'backend': 'https://github.com/ZubalYana/Stashify-backend'},
   },
@@ -65,9 +67,9 @@ export const projects = [
     ],
     description_short: "A landing page for a video editing studio, built with React and Tailwind in collaboration with another dev, working directly with the client.",
     description_extended: "Editing Factory is a landing page for a video editing studio, built in collaboration with another developer. I handled the design and a significant part of the frontend, while staying in direct contact with the client — gathering feedback and iterating throughout the process. One of my first real experiences working in a dev team. Built with React and Tailwind.",
-    tags: ["", "", "", ""],
+    tags: ["React", "Tailwind", "Figma", "Framer-motion"],
+    extended_tags: ["React", "Tailwind", "Figma", "Framer-motion"],
     projectLink: "https://editing-factory.vercel.app/",
-    repoLink: "",
   },
   {
     name: "Jidstro",
@@ -76,11 +78,11 @@ export const projects = [
       "/screenshots/JidStroScreen2.webp",
       "/screenshots/JidStroScreen3.webp",
     ],
-    description_short: "TO BE REVIEWED: ",
-    description_extended: "TO BE REWRITTEN: ",
-    tags: ["", "", "", ""],
+    description_short: "A B2B logistics landing page for UK entrepreneur Nachi Stern — fully designed and coded, with a secured admin panel for self-service content updates.",
+    description_extended: "My first freelance project, built for UK entrepreneur Nachi Stern. This was a landing page for a B2B logistics company — I designed it, refined it based on client feedback, and built it out in code. Since Nachi wanted the page fully customizable, I also developed a secured admin panel that lets him update any text or media on the landing page himself.",
+    tags: ["React", "Tailwind", "Figma", "Express"],
+    extended_tags: ["React", "Tailwind", "Figma", "Express", "JWT", "Bcrypt"],
     projectLink: "https://jidstro.netlify.app/",
-    repoLink: "",
   },
   {
     name: "StuffPlace",
@@ -89,20 +91,21 @@ export const projects = [
       "/screenshots/StuffPlaceScreen2.webp",
       "/screenshots/StuffPlaceScreen3.webp",
     ],
-    description_short: "TO BE REVIEWED: ",
-    description_extended: "TO BE REWRITTEN: ",
-    tags: ["", "", "", ""],
+    description_short: "A hostel landing page in Budapest — fully designed, with a secure admin panel (JWT, bcrypt) to manage rooms shown on the site. Built with Node.js and MongoDB.",
+    description_extended: "A landing page for a hostel in Budapest, Hungary, fully designed by me using the client's own media files. It's powered by a secure admin panel for adding, editing, and removing rooms, which are then displayed live on the landing page. Built with Node.js and MongoDB, secured with JWT and bcrypt.",
+    tags: ["React", "TailwindCSS", "Node.js", "MongoDB"],
+    extended_tags: ["React", "TailwindCSS", "Node.js", "MongoDB"],
     projectLink: "https://stuff-place.netlify.app/",
-    repoLink: "",
   },
   {
     name: "Sheret",
     imagesURLs: ["/screenshots/SheretScreen1.webp", "/screenshots/SheretScreen2.webp"],
-    description_short: "TO BE REVIEWED: ",
-    description_extended: "TO BE REWRITTEN: ",
-    tags: ["", "", "", ""],
-    projectLink: "https://stuff-place.netlify.app/",
-    repoLink: "",
+    description_short: "A file-exchange tool: upload a file, share a 6-digit code, done. Light/dark theme, multilingual UI. Won the Web Development category at a Lviv National University contest.",
+    description_extended: "The oldest project featured here. It's a file-exchange tool: upload a file, get a 6-digit code, share it with whoever needs the file, and they enter the code to download it. Simple by design, but it includes light/dark theme support and multiple interface languages. I even won the Web Development category at a contest hosted by Lviv National University with this project.",
+    tags: ["Javascript", "Node.js", "MongoDB", "Scss", "Multer"],
+    extended_tags: ["Javascript", "Node.js", "Express", "MongoDB", "Scss", "Multer"],
+    projectLink: "https://sheret.onrender.com/",
+    repoLink: "https://github.com/ZubalYana/Sheret",
   },
 ];
 import ProjectCard from "../functionalElements/ProjectCard";
@@ -116,6 +119,7 @@ export interface project {
   description_short: string;
   description_extended: string;
   tags: string[];
+  extended_tags?: string[];
   projectLink?: string;
   repoLink?: string;
   repoLinks?: {
