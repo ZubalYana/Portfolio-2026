@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
-
+import ExtendedProjectCard from "../functionalElements/ExtendedProjectCard";
 export const projects = [
   {
     name: "Heptagon",
@@ -55,7 +55,7 @@ export const projects = [
     description_short:
       "A snippet manager for devs, powered by AI to auto-tag, name, and describe your code. Built with SQL + AI API integration.",
     description_extended:
-      "Ever needed to save a code snippet for later, only to spend ages rummaging through notes and comments trying to find it? Stashify solves that — a tool for developers to save, group, and label reusable code snippets. It's powered by AI that automatically detects the language and generates a name, description, and tags for each snippet. Built with a SQL database and an AI API integration for a clean, fast experience.",
+      "Ever needed to save a code snippet for later, only to spend ages rummaging through notes and comments trying to find it? Stashify solves that — a tool for developers to save, group, and label reusable code snippets. It's powered by AI that automatically detects the language and generates a name, description, and tags for each snippet. Built with a SQL database and an AI API integration.",
     tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun"],
     extended_tags: [
       "TypeScript",
@@ -143,6 +143,23 @@ export const projects = [
   },
 ];
 
+export interface project {
+  name: string;
+  logo?: string;
+  imagesURLs: string[];
+  description_short: string;
+  description_extended: string;
+  tags: string[];
+  extended_tags?: string[];
+  projectLink?: string;
+  repoLink?: string;
+  repoLinks?: {
+    'frontend'?: string,
+    'backend'?: string
+  };
+}
+
+
 export default function Projects() {
   return (
     <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
@@ -175,6 +192,11 @@ export default function Projects() {
       >
         Projects<span className="text-[#008CFF]">.</span>
       </motion.h1>
+      <div className="w-full flex flex-col mt-8 gap-y-20">
+        {projects.map((project, index)=>(
+            <ExtendedProjectCard project={project} key={index}/>
+        ))}
+      </div>
     </div>
   );
 }

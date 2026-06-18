@@ -5,22 +5,6 @@ import PrimaryButton from "../functionalElements/PrimaryButton";
 import { Eye } from "lucide-react";
 import { projects } from "./Projects";
 
-export interface project {
-  name: string;
-  logo?: string;
-  imagesURLs: string[];
-  description_short: string;
-  description_extended: string;
-  tags: string[];
-  extended_tags?: string[];
-  projectLink?: string;
-  repoLink?: string;
-  repoLinks?: {
-    'frontend'?: string,
-    'backend'?: string
-  };
-}
-
 export default function FeaturedProjects() {
   return (
     <motion.section id="featured-projects" className="w-screen md:min-h-screen min-h-0 flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">

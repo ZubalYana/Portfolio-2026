@@ -6,7 +6,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import type { project } from "../screens/FeaturedProjects";
+import type { project } from "../screens/Projects"; 
 
 interface ProjectCardProps {
   project: project;
