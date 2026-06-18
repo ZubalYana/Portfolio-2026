@@ -96,7 +96,7 @@ export default function Homepage() {
 
             <div className="flex gap-x-4">
               <DownloadCVButton Icon={Download} text="Download CV" />
-              <PrimaryButton Icon={Search} text="Discover" />
+              <PrimaryButton Icon={Search} text="Discover" link="/projects" />
             </div>
 
             <div className="flex gap-x-6">
@@ -156,7 +156,7 @@ export default function Homepage() {
             </div>
             <div className="md:w-[33%] flex justify-center gap-x-4">
               <DownloadCVButton Icon={Download} text="Download CV" />
-              <PrimaryButton Icon={Search} text="Discover" link="/" />
+              <PrimaryButton Icon={Search} text="Discover" link="/projects" />
             </div>
             <div className="md:w-[33%] flex justify-end items-center gap-x-6">
               {socialMedia.map((media, index) => (
