@@ -6,6 +6,7 @@ import FeaturedProjects from "./components/screens/FeaturedProjects";
 import Skills from "./components/screens/Skills";
 import Footer from "./components/screens/Footer";
 import Projects from "./components/screens/Projects";
+import FAQ from "./components/screens/FAQ";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <AboutMe />
               <FeaturedProjects />
               <Skills />
+              <FAQ/>
             </>
           }
         />
