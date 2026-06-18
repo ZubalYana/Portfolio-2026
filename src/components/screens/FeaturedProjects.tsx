@@ -10,10 +10,10 @@ export const projects = [
       "/screenshots/HeptagonScreen3.webp",
     ],
     description_short:
-      "TO BE REVIEWED: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
+      "A weekly planner I built when nothing else fit my routine. Tracks daily/weekly progress and integrates with Google Calendar.",
     description_extended:
-      "TO BE REWRITTEN: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it! My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
-    tags: ["react", "typescript", "node.js", "google api"],
+      "I couldn't find a time-management tool that fit my planning routine, so I built my own. Heptagon is a weekly planner that helps you track both daily and overall weekly progress. It integrates with Google Calendar so your events stay visible alongside your tasks. Several friends have ended up using it actively to map out their time.",
+    tags: ["react", "typescript", "node.js", "google api", "mongoDB", "express", "jwt", "bcrypt"],
     projectLink: "https://heptagon-client.onrender.com",
     repoLink: "https://github.com/ZubalYana/heptagon",
   },
@@ -26,10 +26,10 @@ export const projects = [
       "/screenshots/KolodaScreen3.webp",
     ],
     description_short:
-      "TO BE REVIEWED: A project, made during my first part-time job in Koloda - Ukrainian handmade oak furniture business. Included redesigning their webpage and maintaining it further.",
+      "Redesigned the Shopify storefront for a Ukrainian furniture brand: custom components, multi-platform reviews, plus product catalogs and infographics.",
     description_extended:
-      "TO BE REWRITTEN: A project, made during my first part-time job in Koloda - Ukrainian handmade oak furniture business. Included redesigning their webpage and maintaining it further. A project, made during my first part-time job in Koloda - Ukrainian handmade oak furniture business. Included redesigning their webpage and maintaining it further.",
-    tags: ["Shopify", "Shattle", "CEO", "Figma", "Design"],
+      "Koloda is a Ukrainian handcraft furniture company I've been working with long-term. I completely redesigned their Shopify storefront, built custom components, and integrated reviews from multiple platforms — after which the site started receiving its first orders. Beyond the webpage, I've also designed product catalogs and infographics tailored to the company's needs.",
+    tags: ["Shopify", "Shattle", "SEO", "Figma", "Design"],
     projectLink: "https://koloda.shop/",
   },
   {
@@ -42,12 +42,12 @@ export const projects = [
       "/screenshots/StashifyScreen5.webp",
     ],
     description_short:
-      "TO BE REVIEWED: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
+      "A snippet manager for devs, powered by AI to auto-tag, name, and describe your code. Built with SQL + AI API integration.",
     description_extended:
-      "TO BE REWRITTEN: My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it! My own time-management tool developed to suit my planning routine. The project ended up fulfilling needs of many people around me, who actually use it!",
-    tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun"],
+      "Ever needed to save a code snippet for later, only to spend ages rummaging through notes and comments trying to find it? Stashify solves that — a tool for developers to save, group, and label reusable code snippets. It's powered by AI that automatically detects the language and generates a name, description, and tags for each snippet. Built with a SQL database and an AI API integration for a clean, fast experience.",
+    tags: ["TypeScript", "AI", "React", "PostgreSQL", "Bun", "Docker"],
     projectLink: "https://stashify-nine.vercel.app/",
-    repoLink: "",
+    repoLinks: {'frontend': 'https://github.com/ZubalYana/Stashify-client', 'backend': 'https://github.com/ZubalYana/Stashify-backend'},
   },
   //   {
   //     name: "Koloda ( catalog series )",
@@ -63,8 +63,8 @@ export const projects = [
       "/screenshots/EditingFactoryScreen2.webp",
       "/screenshots/EditingFactoryScreen3.webp",
     ],
-    description_short: "TO BE REVIEWED: ",
-    description_extended: "TO BE REWRITTEN: ",
+    description_short: "A landing page for a video editing studio, built with React and Tailwind in collaboration with another dev, working directly with the client.",
+    description_extended: "Editing Factory is a landing page for a video editing studio, built in collaboration with another developer. I handled the design and a significant part of the frontend, while staying in direct contact with the client — gathering feedback and iterating throughout the process. One of my first real experiences working in a dev team. Built with React and Tailwind.",
     tags: ["", "", "", ""],
     projectLink: "https://editing-factory.vercel.app/",
     repoLink: "",
@@ -118,6 +118,10 @@ export interface project {
   tags: string[];
   projectLink?: string;
   repoLink?: string;
+  repoLinks?: {
+    'frontend'?: string,
+    'backend'?: string
+  };
 }
 
 export default function FeaturedProjects() {

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CodeXml, Link as LinkIcon, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  CodeXml,
+  Link as LinkIcon,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import type { project } from "../screens/FeaturedProjects";
 
 interface ProjectCardProps {
@@ -71,7 +76,10 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
             className="absolute top-0 left-0 w-full h-full object-cover"
           />
         </AnimatePresence>
@@ -111,7 +119,11 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         <div className="w-full flex justify-between items-start">
           <div className="flex items-center gap-x-3">
             <div className="w-[32px] h-[32px]">
-              <img src={project.logo} alt={`${project.name} logo`} className="w-full h-full object-contain" />
+              <img
+                src={project.logo}
+                alt={`${project.name} logo`}
+                className="w-full h-full object-contain"
+              />
             </div>
             <h4 className="font-semibold text-[18px] text-[#F5F5F5] group-hover:text-[#008CFF] transition-colors duration-200">
               {project.name}
@@ -119,17 +131,47 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </div>
 
           <div className="flex gap-x-3">
+            {project.repoLinks && (
+              <div className="flex gap-x-2">
+                <div className="flex items-center gap-x-1">
+                  <a
+                    href={project.repoLinks.frontend}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#F5F5F5]/60 hover:text-[#008CFF] transition-all duration-200 hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))]"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <CodeXml size={22} />
+                  </a>
+                  <p className="text-[10px] text-[#F5F5F5]/70">(f)</p>
+                </div>
+                <div  className="flex items-center gap-x-1">
+                  <a
+                    href={project.repoLinks.backend}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#F5F5F5]/60 hover:text-[#008CFF] transition-all duration-200 hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))]"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <CodeXml size={22} />
+                  </a>
+                  <p className="text-[10px] text-[#F5F5F5]/70">(b)</p>
+                </div>
+              </div>
+            )}
+            {project.repoLink && (
+              <a
+                href={project.repoLink}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#F5F5F5]/60 hover:text-[#008CFF] transition-all duration-200 hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <CodeXml size={22} />
+              </a>
+            )}
             <a
-              href={project.repoLink}
-              target="_blank"
-              rel="noreferrer"
-              className="text-[#F5F5F5]/60 hover:text-[#008CFF] transition-all duration-200 hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <CodeXml size={22} />
-            </a>
-            <a
-              href={project.repoLink} 
+              href={project.projectLink}
               target="_blank"
               rel="noreferrer"
               className="text-[#F5F5F5]/60 hover:text-[#008CFF] transition-all duration-200 hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))]"
