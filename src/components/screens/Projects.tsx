@@ -165,7 +165,7 @@ export interface project {
 
 export default function Projects() {
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10 overflow-x-hidden">
       <a
         href="/"
         className="absolute top-[20px] left-[20px] lg:top-[40px] lg:left-[40px]"

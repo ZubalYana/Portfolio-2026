@@ -68,7 +68,7 @@ export default function ExtendedProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`w-full flex flex-col overflow-x-hidden ${
+      className={`w-full flex flex-col ${
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       } items-center gap-10 lg:gap-8`}
     >
