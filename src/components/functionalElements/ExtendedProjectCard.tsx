@@ -31,7 +31,7 @@ export default function ExtendedProjectCard({
 }: ExtendedProjectCardProps) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(1);
-  const [imgAspect, setImgAspect] = useState(4 / 3); 
+  const [imgAspect, setImgAspect] = useState(4 / 3);
   const reversed = index % 2 === 1;
 
   const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -105,13 +105,13 @@ export default function ExtendedProjectCard({
           <>
             <button
               onClick={prevImage}
-              className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-100 lg:opacity-0 lg:group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={nextImage}
-              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-[#008CFF]/80 backdrop-blur-sm text-white rounded-full opacity-100 lg:opacity-0 lg:group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronRight size={20} />
             </button>
