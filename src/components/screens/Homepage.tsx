@@ -20,6 +20,8 @@ import telegramIcon from "../../assets/socialMedia/telegram.svg";
 import { Search, Download } from "lucide-react";
 import PrimaryButton from "../functionalElements/PrimaryButton";
 import DownloadCVButton from "../functionalElements/DownloadCVButton";
+import { useState } from "react";
+import MobileNav from "../functionalElements/MobileNav";
 
 const mobileIcons = [
   { src: tailwindIcon,   alt: "tailwind",   top: "8%",  left: "5%",  rotate: -15, size: 36 },
@@ -37,6 +39,7 @@ const mobileIcons = [
 ];
 
 export default function Homepage() {
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const socialMedia = [
     { icon: githubIcon,   alt: "Github icon",    link: "https://github.com/ZubalYana" },
     { icon: telegramIcon, alt: "Telegram icon",  link: "https://t.me/yanavesq#" },
@@ -48,9 +51,16 @@ export default function Homepage() {
       <HomepageBg />
 
       <div className="lg:hidden relative z-10 h-full flex flex-col">
-        <Navigation />
+        <div 
+        className="z-50 absolute top-[20px] right-[20px] w-[24px] h-[16px] flex flex-col cursor-pointer justify-between"
+        onClick={()=>{setMobileNavOpen(true)}}
+        >
+          <div className="w-full h-[2px] rounded-[10px] bg-[#F5F5F5]/45 tansition-all duration-200 "></div>
+          <div className="w-full h-[2px] rounded-[10px] bg-[#F5F5F5]/45 tansition-all duration-200 "></div>
+          <div className="w-full h-[2px] rounded-[10px] bg-[#F5F5F5]/45 tansition-all duration-200 "></div>
+        </div>
 
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none z-5">
           {mobileIcons.map((icon) => (
             <img
               key={icon.alt}
@@ -108,6 +118,11 @@ export default function Homepage() {
             </div>
           </motion.div>
         </div>
+        {mobileNavOpen && (
+          <motion.div className="w-full h-screen fixed flex justify-center items-center bg-[#121212]/70 z-50" onClick={()=>{setMobileNavOpen(false)}}>
+            <MobileNav onClose={()=>setMobileNavOpen(false)}/>
+          </motion.div>
+        )}
       </div>
 
       <div className="hidden lg:block relative z-10">
