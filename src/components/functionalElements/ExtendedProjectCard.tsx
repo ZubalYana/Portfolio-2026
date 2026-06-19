@@ -31,7 +31,15 @@ export default function ExtendedProjectCard({
 }: ExtendedProjectCardProps) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(1);
+  const [imgAspect, setImgAspect] = useState(4 / 3); 
   const reversed = index % 2 === 1;
+
+  const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const { naturalWidth, naturalHeight } = e.currentTarget;
+    if (naturalWidth && naturalHeight) {
+      setImgAspect(naturalWidth / naturalHeight);
+    }
+  };
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -64,7 +72,10 @@ export default function ExtendedProjectCard({
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       } items-center gap-10 lg:gap-8`}
     >
-      <div className="relative w-full lg:w-[55%] min-h-[300px] lg:max-h-[320px] rounded-[20px] overflow-hidden shadow-[0_0_18px_6px_rgba(0,140,255,0.35)] group/carousel shrink-0">
+      <div
+        className="relative w-full aspect-[var(--img-ar)] lg:aspect-auto lg:w-[55%] lg:min-h-[300px] lg:max-h-[320px] rounded-[10px] lg:rounded-[20px] overflow-hidden shadow-[0_0_18px_6px_rgba(0,140,255,0.35)] group/carousel shrink-0 transition-[aspect-ratio] duration-300"
+        style={{ "--img-ar": imgAspect } as React.CSSProperties}
+      >
         <AnimatePresence initial={false} custom={slideDirection}>
           <motion.div
             key={currentImgIndex}
@@ -82,7 +93,8 @@ export default function ExtendedProjectCard({
             <img
               src={project.imagesURLs[currentImgIndex]}
               alt={`${project.name} screenshot ${currentImgIndex + 1}`}
-              className="block w-full h-full object-cover"
+              onLoad={handleImgLoad}
+              className="block w-full h-full object-contain lg:object-cover"
             />
           </motion.div>
         </AnimatePresence>

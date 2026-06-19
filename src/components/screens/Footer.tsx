@@ -44,7 +44,6 @@ export default function Footer() {
     },
   ];
 
-  //to actually link once all the pages are ready, + header navigation, too
   const links = [
     {
       label: "About Me",
