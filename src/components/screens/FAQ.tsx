@@ -36,7 +36,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="w-screen lg:min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10"
+      className="w-screen flex flex-col items-center p-[20px] pb-[40px] lg:p-[40px] relative z-10"
     >
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -48,7 +48,7 @@ export default function FAQ() {
         FAQ<span className="text-[#008CFF]">.</span>
       </motion.h1>
 
-      <div className="w-full max-w-[720px] mt-10 lg:mt-14 flex flex-col gap-3">
+      <div className="w-full max-w-[720px] mt-10 flex flex-col gap-3">
         {questions.map((item, index) => {
           const isOpen = openIndex === index;
           return (
