@@ -4,6 +4,7 @@ import githubIcon from "../../assets/socialMedia/github.svg";
 import instIcon from "../../assets/socialMedia/inst.svg";
 import telegramIcon from "../../assets/socialMedia/telegram.svg";
 import useScrollToSection from "../helpers/NavigationScroll";
+import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -64,7 +65,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-screen border-t border-[#F5F5F5]/10 p-[20px] lg:p-[40px] relative z-10">
+    <footer className="w-screen border-t border-[#F5F5F5]/10 p-[20px] lg:p-[40px] relative z-10 overflow-hidden">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
         <motion.div className="flex flex-col gap-y-4" {...fadeUp(0)}>
           <div className="text-left">
@@ -138,6 +139,13 @@ export default function Footer() {
           © 2026 Yana Zubal
         </p>
       </motion.div>
+      <BackgroundGlow
+        width={600}
+        height={400}
+        opacity={0.15}
+        bottom={-150}
+        right={-100}
+      />
     </footer>
   );
 }

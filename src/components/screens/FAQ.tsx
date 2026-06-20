@@ -30,6 +30,8 @@ const questions = [
   },
 ];
 
+import BackgroundGlow from "../decorations/BackgroundGlow";
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -105,6 +107,13 @@ export default function FAQ() {
           );
         })}
       </div>
+      <BackgroundGlow
+        width={1200}
+        height={500}
+        opacity={0.15}
+        bottom={100}
+        left={-300}
+      />
     </section>
   );
 }

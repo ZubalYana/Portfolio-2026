@@ -147,8 +147,8 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
-      <BackgroundGlow width={600} height={500} opacity={0.3} top={-100} left={-150}/>
-      <BackgroundGlow width={1200} height={800} opacity={0.2} right={-280} bottom={-180}/>
+      <BackgroundGlow width={600} height={500} opacity={0.15} top={-100} left={-150}/>
+      <BackgroundGlow width={1200} height={800} opacity={0.1} right={-280} bottom={-180}/>
     </section>
   );
 }

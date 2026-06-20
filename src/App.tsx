@@ -15,13 +15,13 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <div className="overflow-x-hidden">
               <Homepage />
               <AboutMe />
               <FeaturedProjects />
               <Skills />
               <FAQ/>
-            </>
+            </div>
           }
         />
         <Route path="/projects" element={<Projects/>} />

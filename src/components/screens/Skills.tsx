@@ -21,10 +21,18 @@ import git from "../../assets/techIcons/git.svg?react";
 import docker from "../../assets/techIcons/docker.svg?react";
 
 import type { FC, SVGProps } from "react";
+import BackgroundGlow from "../decorations/BackgroundGlow";
 
-type SVGComponent = FC<SVGProps<SVGSVGElement>>
+type SVGComponent = FC<SVGProps<SVGSVGElement>>;
 
-const Skill = ({ name, icon: Icon }: { name: string, icon: SVGComponent, type: string }) => {
+const Skill = ({
+  name,
+  icon: Icon,
+}: {
+  name: string;
+  icon: SVGComponent;
+  type: string;
+}) => {
   return (
     <motion.div
       whileHover={{ y: -6, scale: 1.05 }}
@@ -56,8 +64,8 @@ const Skill = ({ name, icon: Icon }: { name: string, icon: SVGComponent, type: s
         {name}
       </p>
     </motion.div>
-  )
-}
+  );
+};
 export default function Skills() {
   const skills = [
     {
@@ -149,8 +157,8 @@ export default function Skills() {
 
   const groups: { label: string; type: string }[] = [
     { label: "Frontend", type: "frontend" },
-    { label: "Backend",  type: "backend"  },
-    { label: "Tools",    type: "tool"     },
+    { label: "Backend", type: "backend" },
+    { label: "Tools", type: "tool" },
   ];
 
   const containerVariants = {
@@ -161,12 +169,15 @@ export default function Skills() {
   };
 
   const cardVariants = {
-    hidden:  { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   return (
-     <section id="skills" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <section
+      id="skills"
+      className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10"
+    >
       <h1 className="uppercase font-bold text-[32px]">
         Skills<span className="text-[#008CFF]">.</span>
       </h1>
@@ -192,13 +203,31 @@ export default function Skills() {
                 .filter((s) => s.type === group.type)
                 .map((skill, i) => (
                   <motion.div key={i} variants={cardVariants}>
-                    <Skill name={skill.name} icon={skill.icon} type={skill.type} />
+                    <Skill
+                      name={skill.name}
+                      icon={skill.icon}
+                      type={skill.type}
+                    />
                   </motion.div>
                 ))}
             </motion.div>
           </div>
         ))}
       </div>
+      <BackgroundGlow
+        width={1200}
+        height={700}
+        opacity={0.1}
+        top={-120}
+        left={-500}
+      />
+      <BackgroundGlow
+        width={1000}
+        height={600}
+        opacity={0.15}
+        right={-120}
+        bottom={-200}
+      />
     </section>
   );
 }
