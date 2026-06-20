@@ -76,17 +76,17 @@ export default function AboutMe() {
           <p className="text-[12px] text-left w-full text-[#F5F5F5]/80">
             Hey! 👋 I'm Yana, a full-stack web developer & UI/UX designer based
             in Lviv, Ukraine. <br /><br />
-            I've been into programming since 2022 — 4 years in the field, with
-            roughly 2 of them in commercial work. I believe programmers are,
-            first of all, people who seek solutions and push the world forward.{" "}
+            I've been into programming since 2022: 4 years in the field, with
+            roughly 2 of them in commercial work. I believe programmers are
+            first of all people who seek solutions and push the world forward.
             <br /><br />
             I'd describe myself as hardworking and genuinely open to growth. I
             look for opportunities everywhere I can. Responsible at work, pretty
-            easygoing outside of it — I find it easy to connect with people.
+            easygoing outside of it, I find it easy to connect with people.
             With plenty of team projects under my belt, I know how to
             communicate and build trust in a working environment. I'm also big
             on time management: I kept a part-time job while finishing school
-            and sitting my final exams, which I'm quietly proud of.
+            and preparing for my final exams, which I'm quietly proud of.
           </p>
 
           <div className="w-full flex flex-col gap-y-6 md:gap-y-0 md:flex-row mt-6 md:mt-4">
