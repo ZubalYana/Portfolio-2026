@@ -6,7 +6,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import type { project } from "../screens/Projects"; 
+import type { project } from "../screens/Projects";
 
 interface ProjectCardProps {
   project: project;
@@ -88,13 +88,13 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           <>
             <button
               onClick={prevImage}
-              className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-black/50 hover:bg-black/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-black/50 hover:bg-black/80 backdrop-blur-sm text-white rounded-full opacity-100 lg:opacity-0 lg:group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={nextImage}
-              className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-black/50 hover:bg-black/80 backdrop-blur-sm text-white rounded-full opacity-0 group-hover/carousel:opacity-100 transition-all duration-200 z-20"
+              className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-black/50 hover:bg-black/80 backdrop-blur-sm text-white rounded-full opacity-100 lg:opacity-0 lg:group-hover/carousel:opacity-100 transition-all duration-200 z-20"
             >
               <ChevronRight size={18} />
             </button>
@@ -145,7 +145,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                   </a>
                   <p className="text-[10px] text-[#F5F5F5]/70">(f)</p>
                 </div>
-                <div  className="flex items-center gap-x-1">
+                <div className="flex items-center gap-x-1">
                   <a
                     href={project.repoLinks.backend}
                     target="_blank"
