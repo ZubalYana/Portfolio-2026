@@ -137,7 +137,7 @@ export default function ExtendedProjectCard({
       </div>
 
       <div className="w-full lg:w-[45%] flex flex-col text-left">
-        <div className="w-full max-w-full flex items-center justify-start gap-x-4">
+        {/* <div className="w-full max-w-full flex items-center justify-start gap-x-4">
           {project.logo && (
             <div className="w-auto h-[35px] shrink-0">
               <img
@@ -150,7 +150,7 @@ export default function ExtendedProjectCard({
           <h2 className="font-bold text-[26px] sm:text-[32px] text-[#F5F5F5] text-left">
             {project.name}
           </h2>
-        </div>
+        </div> */}
 
         <p className="text-[12px] leading-relaxed text-[#F5F5F5]/70 text-left mt-2">
           {project.description_extended}
