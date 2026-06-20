@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import portfolio_photo2 from "../../assets/portfolio_photo2.jpg";
 import { GraduationCap, Code2Icon, Globe } from "lucide-react";
+import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const languages = [
   { language: "Ukrainian", level: "Native", fillingPercantage: 90 },
@@ -37,7 +38,7 @@ function LanguageBar({ language, level, fillingPercantage, index }: {
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <section id="about" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10 relative">
 
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -146,6 +147,8 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
+      <BackgroundGlow width={600} height={500} opacity={0.3} top={-100} left={-150}/>
+      <BackgroundGlow width={1200} height={800} opacity={0.2} right={-280} bottom={-180}/>
     </section>
   );
 }
