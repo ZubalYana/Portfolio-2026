@@ -66,7 +66,7 @@ export default function Footer() {
 
   return (
     <footer className="w-screen border-t border-[#F5F5F5]/10 p-[20px] lg:p-[40px] relative z-10 overflow-hidden">
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 overflow-hidden">
         <motion.div className="flex flex-col gap-y-4" {...fadeUp(0)}>
           <div className="text-left">
             <h1 className="uppercase font-bold text-[32px]">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import ExtendedProjectCard from "../functionalElements/ExtendedProjectCard";
+
 export const projects = [
   {
     name: "Heptagon",
@@ -157,32 +158,31 @@ export interface project {
   projectLink?: string;
   repoLink?: string;
   repoLinks?: {
-    'frontend'?: string,
-    'backend'?: string
+    frontend?: string;
+    backend?: string;
   };
 }
 
-
 export default function Projects() {
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10">
+    <div className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-hidden">
       <a
         href="/"
-        className="absolute top-[20px] left-[20px] lg:top-[40px] lg:left-[40px]"
+        className="absolute top-[20px] left-[20px] lg:top-[40px] lg:left-[40px] z-50"
       >
         <ChevronLeft
           className="
-    text-[#F5F5F5]/45 cursor-pointer
-    transition-[color,text-shadow,filter] duration-200
-    after:content-[''] after:absolute after:bottom-0
-    after:left-1/2 after:right-1/2 after:h-px
-    after:bg-[#F5F5F5]/50
-    after:transition-[left,right,box-shadow] after:duration-250
-    hover:text-[#F5F5F5]/95
-    hover:[text-shadow:0_0_8px_rgba(255,255,255,0.4)]
-    hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))_drop-shadow(0_0_12px_rgba(0,140,255,0.5))]
-    hover:after:left-0 hover:after:right-0
-    hover:after:[box-shadow:0_0_6px_rgba(255,255,255,0.5)]"
+            text-[#F5F5F5]/45 cursor-pointer
+            transition-[color,text-shadow,filter] duration-200
+            after:content-[''] after:absolute after:bottom-0
+            after:left-1/2 after:right-1/2 after:h-px
+            after:bg-[#F5F5F5]/50
+            after:transition-[left,right,box-shadow] after:duration-250
+            hover:text-[#F5F5F5]/95
+            hover:[text-shadow:0_0_8px_rgba(255,255,255,0.4)]
+            hover:[filter:drop-shadow(0_0_6px_rgba(0,140,255,0.8))_drop-shadow(0_0_12px_rgba(0,140,255,0.5))]
+            hover:after:left-0 hover:after:right-0
+            hover:after:[box-shadow:0_0_6px_rgba(255,255,255,0.5)]"
           size={28}
         />
       </a>
@@ -195,9 +195,9 @@ export default function Projects() {
       >
         Projects<span className="text-[#008CFF]">.</span>
       </motion.h1>
-      <div className="w-full flex flex-col mt-8 gap-y-20">
-        {projects.map((project, index)=>(
-            <ExtendedProjectCard project={project} key={index}/>
+      <div className="w-full flex flex-col mt-8 gap-y-20 z-10 overflow-hidden">
+        {projects.map((project, index) => (
+          <ExtendedProjectCard project={project} key={index} />
         ))}
       </div>
     </div>

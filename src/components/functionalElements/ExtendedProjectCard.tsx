@@ -68,9 +68,8 @@ export default function ExtendedProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`w-full flex flex-col ${
-        reversed ? "lg:flex-row-reverse" : "lg:flex-row"
-      } items-center gap-10 lg:gap-8`}
+      className={`w-full flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"
+        } items-center gap-10 lg:gap-8`}
     >
       <div
         className="relative w-full aspect-[var(--img-ar)] lg:aspect-auto lg:w-[55%] lg:min-h-[300px] lg:max-h-[320px] rounded-[10px] lg:rounded-[20px] overflow-hidden shadow-[0_0_18px_6px_rgba(0,140,255,0.35)] group/carousel shrink-0 transition-[aspect-ratio] duration-300"
@@ -124,11 +123,10 @@ export default function ExtendedProjectCard({
                     e.stopPropagation();
                     goTo(i);
                   }}
-                  className={`h-[7px] rounded-full transition-all duration-300 ${
-                    i === currentImgIndex
-                      ? "w-[22px] bg-[#008CFF] shadow-[0_0_10px_rgba(0,140,255,0.8)]"
-                      : "w-[7px] bg-[#F5F5F5]/40 hover:bg-[#F5F5F5]/70"
-                  }`}
+                  className={`h-[7px] rounded-full transition-all duration-300 ${i === currentImgIndex
+                    ? "w-[22px] bg-[#008CFF] shadow-[0_0_10px_rgba(0,140,255,0.8)]"
+                    : "w-[7px] bg-[#F5F5F5]/40 hover:bg-[#F5F5F5]/70"
+                    }`}
                 />
               ))}
             </div>
@@ -159,21 +157,21 @@ export default function ExtendedProjectCard({
         <div className="w-full flex flex-wrap gap-2 mt-5">
           {project.extended_tags
             ? project.extended_tags.map((tag, i) => (
-                <div
-                  key={i}
-                  className="px-3 py-1.5 bg-[#008CFF]/10 border border-[#008CFF]/20 rounded-[8px] text-[#008CFF] text-[12px] font-medium tracking-wide"
-                >
-                  {tag.toUpperCase()}
-                </div>
-              ))
+              <div
+                key={i}
+                className="px-3 py-1.5 bg-[#008CFF]/10 border border-[#008CFF]/20 rounded-[8px] text-[#008CFF] text-[12px] font-medium tracking-wide"
+              >
+                {tag.toUpperCase()}
+              </div>
+            ))
             : project.tags.map((tag, i) => (
-                <div
-                  key={i}
-                  className="px-3 py-1.5 bg-[#008CFF]/10 border border-[#008CFF]/20 rounded-[8px] text-[#008CFF] text-[12px] font-medium tracking-wide"
-                >
-                  {tag.toUpperCase()}
-                </div>
-              ))}
+              <div
+                key={i}
+                className="px-3 py-1.5 bg-[#008CFF]/10 border border-[#008CFF]/20 rounded-[8px] text-[#008CFF] text-[12px] font-medium tracking-wide"
+              >
+                {tag.toUpperCase()}
+              </div>
+            ))}
         </div>
 
         <div className="flex items-center gap-x-5 mt-6">
