@@ -21,7 +21,6 @@ import git from "../../assets/techIcons/git.svg?react";
 import docker from "../../assets/techIcons/docker.svg?react";
 
 import type { FC, SVGProps } from "react";
-import BackgroundGlow from "../decorations/BackgroundGlow";
 
 type SVGComponent = FC<SVGProps<SVGSVGElement>>;
 
@@ -147,21 +146,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-
-      <BackgroundGlow
-        width={1200}
-        height={700}
-        opacity={0.1}
-        top={-120}
-        left={-500}
-      />
-      <BackgroundGlow
-        width={1000}
-        height={600}
-        opacity={0.15}
-        right={-120}
-        bottom={-200}
-      />
     </section>
   );
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const questions = [
   {
@@ -103,14 +102,6 @@ export default function FAQ() {
           );
         })}
       </div>
-
-      <BackgroundGlow
-        width={1200}
-        height={500}
-        opacity={0.15}
-        bottom={100}
-        left={-300}
-      />
     </section>
   );
 }

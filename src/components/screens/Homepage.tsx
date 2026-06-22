@@ -194,7 +194,7 @@ export default function Homepage() {
   ];
 
   return (
-    <div className="w-full h-screen p-[20px] lg:p-[40px] overflow-hidden">
+    <div className="w-full h-screen p-[20px] lg:p-[40px] overflow-hidden relative">
       <HomepageBg />
 
       <div className="lg:hidden relative z-10 h-full flex flex-col">

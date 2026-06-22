@@ -4,7 +4,6 @@ import githubIcon from "../../assets/socialMedia/github.svg";
 import instIcon from "../../assets/socialMedia/inst.svg";
 import telegramIcon from "../../assets/socialMedia/telegram.svg";
 import useScrollToSection from "../helpers/NavigationScroll";
-import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -139,13 +138,6 @@ export default function Footer() {
           © 2026 Yana Zubal
         </p>
       </motion.div>
-      <BackgroundGlow
-        width={600}
-        height={400}
-        opacity={0.15}
-        bottom={-150}
-        right={-100}
-      />
     </footer>
   );
 }

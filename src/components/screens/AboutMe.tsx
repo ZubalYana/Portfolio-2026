@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import portfolio_photo2 from "../../assets/portfolio_photo2.jpg";
 import { GraduationCap, Code2Icon, Globe } from "lucide-react";
-import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const languages = [
   { language: "Ukrainian", level: "Native", fillingPercantage: 90 },
@@ -138,7 +137,6 @@ export default function AboutMe() {
               </div>
               <h5 className="uppercase font-medium text-[16px]">Languages</h5>
             </div>
-            {/* FIXED: Simplified flex classes to prevent wrapping issues */}
             <div className="w-full flex flex-col gap-y-4 md:flex-row md:gap-x-6 mt-4">
               {languages.map((lang, index) => (
                 <LanguageBar key={index} {...lang} index={index} />
@@ -148,9 +146,6 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
-
-      <BackgroundGlow width={600} height={500} opacity={0.15} top={-100} left={-150} />
-      <BackgroundGlow width={1200} height={800} opacity={0.1} right={-280} bottom={-180} />
     </section>
   );
 }

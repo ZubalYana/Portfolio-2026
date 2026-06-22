@@ -4,7 +4,6 @@ import ProjectCard from "../functionalElements/ProjectCard";
 import PrimaryButton from "../functionalElements/PrimaryButton";
 import { Eye } from "lucide-react";
 import { projects } from "./Projects";
-import BackgroundGlow from "../decorations/BackgroundGlow";
 
 export default function FeaturedProjects() {
   return (
@@ -26,9 +25,6 @@ export default function FeaturedProjects() {
         <GithubButton />
         <PrimaryButton Icon={Eye} text="Explore" link="/projects" />
       </div>
-
-      <BackgroundGlow width={600} height={500} opacity={0.1} top={-120} left={-100} />
-      <BackgroundGlow width={800} height={600} opacity={0.15} right={40} bottom={-150} />
     </motion.section>
   );
 }
