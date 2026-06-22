@@ -125,7 +125,7 @@ export default function Skills() {
             </div>
 
             <motion.div
-              className="flex flex-wrap gap-3 overflow-hidden"
+              className="flex flex-wrap gap-3"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
