@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
+import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const questions = [
   {
@@ -30,15 +31,13 @@ const questions = [
   },
 ];
 
-import BackgroundGlow from "../decorations/BackgroundGlow";
-
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section
       id="faq"
-      className="w-screen flex flex-col items-center p-[20px] pb-[40px] lg:p-[40px] relative z-10"
+      className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-hidden"
     >
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -50,7 +49,7 @@ export default function FAQ() {
         FAQ<span className="text-[#008CFF]">.</span>
       </motion.h1>
 
-      <div className="w-full max-w-[720px] mt-10 flex flex-col gap-3">
+      <div className="w-full max-w-[720px] mt-10 flex flex-col gap-3 z-10 overflow-hidden">
         {questions.map((item, index) => {
           const isOpen = openIndex === index;
           return (
@@ -60,29 +59,26 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className={`w-full rounded-[12px] border transition-colors duration-300 ${
-                isOpen
-                  ? "border-[#008CFF]/30 bg-[#008CFF]/5"
-                  : "border-[#F5F5F5]/10 bg-[#F5F5F5]/5 hover:border-[#F5F5F5]/20"
-              }`}
+              className={`w-full rounded-[12px] border transition-colors duration-300 ${isOpen
+                ? "border-[#008CFF]/30 bg-[#008CFF]/5"
+                : "border-[#F5F5F5]/10 bg-[#F5F5F5]/5 hover:border-[#F5F5F5]/20"
+                }`}
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left cursor-pointer"
               >
                 <span
-                  className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-200 ${
-                    isOpen ? "text-[#008CFF]" : "text-[#F5F5F5]"
-                  }`}
+                  className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-200 ${isOpen ? "text-[#008CFF]" : "text-[#F5F5F5]"
+                    }`}
                 >
                   {item.question}
                 </span>
                 <motion.span
                   animate={{ rotate: isOpen ? 45 : 0 }}
                   transition={{ duration: 0.25, ease: "easeInOut" }}
-                  className={`shrink-0 ${
-                    isOpen ? "text-[#008CFF]" : "text-[#F5F5F5]/50"
-                  }`}
+                  className={`shrink-0 ${isOpen ? "text-[#008CFF]" : "text-[#F5F5F5]/50"
+                    }`}
                 >
                   <Plus size={18} />
                 </motion.span>
@@ -107,6 +103,7 @@ export default function FAQ() {
           );
         })}
       </div>
+
       <BackgroundGlow
         width={1200}
         height={500}

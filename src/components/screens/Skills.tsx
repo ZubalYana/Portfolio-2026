@@ -66,93 +66,26 @@ const Skill = ({
     </motion.div>
   );
 };
+
 export default function Skills() {
   const skills = [
-    {
-      name: "HTML",
-      icon: html,
-      type: "frontend",
-    },
-    {
-      name: "CSS",
-      icon: css,
-      type: "frontend",
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-      type: "frontend",
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-      type: "frontend",
-    },
-    {
-      name: "React",
-      icon: react,
-      type: "frontend",
-    },
-    {
-      name: "Electron",
-      icon: electron,
-      type: "frontend",
-    },
-    {
-      name: "Tailwind",
-      icon: tailwind,
-      type: "frontend",
-    },
-    {
-      name: "Zustand",
-      icon: zustand,
-      type: "frontend",
-    },
-    {
-      name: "Node.js",
-      icon: nodejs,
-      type: "backend",
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-      type: "backend",
-    },
-    {
-      name: "Swagger",
-      icon: swagger,
-      type: "backend",
-    },
-    {
-      name: "PostgreSQL",
-      icon: postgresql,
-      type: "backend",
-    },
-    {
-      name: "Next.js",
-      icon: nextjs,
-      type: "backend",
-    },
-    {
-      name: "Shopify",
-      icon: shopify,
-      type: "tool",
-    },
-    {
-      name: "Figma",
-      icon: figma,
-      type: "tool",
-    },
-    {
-      name: "Git",
-      icon: git,
-      type: "tool",
-    },
-    {
-      name: "Docker",
-      icon: docker,
-      type: "tool",
-    },
+    { name: "HTML", icon: html, type: "frontend" },
+    { name: "CSS", icon: css, type: "frontend" },
+    { name: "JavaScript", icon: javascript, type: "frontend" },
+    { name: "TypeScript", icon: typescript, type: "frontend" },
+    { name: "React", icon: react, type: "frontend" },
+    { name: "Electron", icon: electron, type: "frontend" },
+    { name: "Tailwind", icon: tailwind, type: "frontend" },
+    { name: "Zustand", icon: zustand, type: "frontend" },
+    { name: "Node.js", icon: nodejs, type: "backend" },
+    { name: "MongoDB", icon: mongodb, type: "backend" },
+    { name: "Swagger", icon: swagger, type: "backend" },
+    { name: "PostgreSQL", icon: postgresql, type: "backend" },
+    { name: "Next.js", icon: nextjs, type: "backend" },
+    { name: "Shopify", icon: shopify, type: "tool" },
+    { name: "Figma", icon: figma, type: "tool" },
+    { name: "Git", icon: git, type: "tool" },
+    { name: "Docker", icon: docker, type: "tool" },
   ];
 
   const groups: { label: string; type: string }[] = [
@@ -176,13 +109,13 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10"
+      className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-hidden"
     >
       <h1 className="uppercase font-bold text-[32px]">
         Skills<span className="text-[#008CFF]">.</span>
       </h1>
 
-      <div className="w-full max-w-[900px] flex flex-col gap-y-10 mt-8">
+      <div className="w-full max-w-[900px] flex flex-col gap-y-10 mt-8 z-10">
         {groups.map((group) => (
           <div key={group.type}>
             <div className="flex items-center gap-x-3 mb-4">
@@ -193,7 +126,7 @@ export default function Skills() {
             </div>
 
             <motion.div
-              className="flex flex-wrap gap-3 "
+              className="flex flex-wrap gap-3 overflow-hidden"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -214,6 +147,7 @@ export default function Skills() {
           </div>
         ))}
       </div>
+
       <BackgroundGlow
         width={1200}
         height={700}
