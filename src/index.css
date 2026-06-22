@@ -14,7 +14,7 @@
   flex-direction: column;
   box-sizing: border-box;
   background-color: #121212;
-  color: #F5F5F5;
+  color: #f5f5f5;
   overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oxanium';
+  font-family: "Oxanium";
 }
 
 a,
@@ -36,5 +36,5 @@ link,
 div,
 p,
 span {
-  font-family: 'Ubuntu Sans Mono';
+  font-family: "Ubuntu Sans Mono";
 }

@@ -17,7 +17,6 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #008cff #121212;
-  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {

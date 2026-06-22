@@ -24,45 +24,173 @@ import { useState } from "react";
 import MobileNav from "../functionalElements/MobileNav";
 
 const mobileIcons = [
-  { src: tailwindIcon, alt: "tailwind", top: "8%", left: "5%", rotate: -15, size: 36 },
-  { src: reactIcon, alt: "react", top: "15%", left: "78%", rotate: 20, size: 40 },
+  {
+    src: tailwindIcon,
+    alt: "tailwind",
+    top: "8%",
+    left: "5%",
+    rotate: -15,
+    size: 36,
+  },
+  {
+    src: reactIcon,
+    alt: "react",
+    top: "15%",
+    left: "78%",
+    rotate: 20,
+    size: 40,
+  },
   { src: htmlIcon, alt: "html", top: "30%", left: "88%", rotate: -8, size: 34 },
   { src: cssIcon, alt: "css", top: "55%", left: "82%", rotate: 23, size: 30 },
   { src: figmaIcon, alt: "figma", top: "70%", left: "6%", rotate: 3, size: 32 },
-  { src: shopifyIcon, alt: "shopify", top: "80%", left: "75%", rotate: 3, size: 32 },
-  { src: typescriptIcon, alt: "typescript", top: "10%", left: "88%", rotate: -10, size: 34 },
-  { src: nodejsIcon, alt: "nodejs", top: "42%", left: "4%", rotate: 3, size: 32 },
-  { src: mongoDBIcon, alt: "mongodb", top: "60%", left: "88%", rotate: 15, size: 36 },
-  { src: javascriptIcon, alt: "javascript", top: "75%", left: "88%", rotate: 20, size: 32 },
-  { src: swaggerIcon, alt: "swagger", top: "20%", left: "4%", rotate: -20, size: 28 },
+  {
+    src: shopifyIcon,
+    alt: "shopify",
+    top: "80%",
+    left: "75%",
+    rotate: 3,
+    size: 32,
+  },
+  {
+    src: typescriptIcon,
+    alt: "typescript",
+    top: "10%",
+    left: "88%",
+    rotate: -10,
+    size: 34,
+  },
+  {
+    src: nodejsIcon,
+    alt: "nodejs",
+    top: "42%",
+    left: "4%",
+    rotate: 3,
+    size: 32,
+  },
+  {
+    src: mongoDBIcon,
+    alt: "mongodb",
+    top: "60%",
+    left: "88%",
+    rotate: 15,
+    size: 36,
+  },
+  {
+    src: javascriptIcon,
+    alt: "javascript",
+    top: "75%",
+    left: "88%",
+    rotate: 20,
+    size: 32,
+  },
+  {
+    src: swaggerIcon,
+    alt: "swagger",
+    top: "20%",
+    left: "4%",
+    rotate: -20,
+    size: 28,
+  },
   { src: gitIcon, alt: "git", top: "88%", left: "10%", rotate: -8, size: 34 },
 ];
 
-// FIXED: Separated left (frontend) and right (backend) using percentages
 const desktopIcons = [
-  // Frontend & Design (Left)
-  { src: tailwindIcon, alt: "tailwind", top: "10%", left: "10%", rotate: -15, size: 64 },
-  { src: reactIcon, alt: "react", top: "35%", left: "18%", rotate: 20, size: 72 },
+  {
+    src: tailwindIcon,
+    alt: "tailwind",
+    top: "10%",
+    left: "10%",
+    rotate: -15,
+    size: 64,
+  },
+  {
+    src: reactIcon,
+    alt: "react",
+    top: "35%",
+    left: "18%",
+    rotate: 20,
+    size: 72,
+  },
   { src: htmlIcon, alt: "html", top: "60%", left: "8%", rotate: -8, size: 60 },
   { src: cssIcon, alt: "css", top: "75%", left: "20%", rotate: 23, size: 52 },
-  { src: figmaIcon, alt: "figma", top: "25%", left: "25%", rotate: 3, size: 56 },
-  { src: shopifyIcon, alt: "shopify", top: "50%", left: "28%", rotate: 3, size: 56 },
+  {
+    src: figmaIcon,
+    alt: "figma",
+    top: "20%",
+    left: "28%",
+    rotate: 7,
+    size: 56,
+  },
+  {
+    src: shopifyIcon,
+    alt: "shopify",
+    top: "50%",
+    left: "28%",
+    rotate: 3,
+    size: 56,
+  },
 
-  // Backend & Tools (Right)
-  { src: typescriptIcon, alt: "typescript", top: "10%", right: "12%", rotate: -10, size: 60 },
-  { src: nodejsIcon, alt: "nodejs", top: "35%", right: "20%", rotate: 3, size: 56 },
-  { src: mongoDBIcon, alt: "mongodb", top: "60%", right: "10%", rotate: 15, size: 64 },
-  { src: javascriptIcon, alt: "javascript", top: "75%", right: "22%", rotate: 20, size: 56 },
-  { src: swaggerIcon, alt: "swagger", top: "25%", right: "28%", rotate: -20, size: 48 },
-  { src: gitIcon, alt: "git", top: "50%", right: "15%", rotate: -8, size: 60 },
+  {
+    src: typescriptIcon,
+    alt: "typescript",
+    top: "10%",
+    right: "12%",
+    rotate: -10,
+    size: 60,
+  },
+  {
+    src: nodejsIcon,
+    alt: "nodejs",
+    top: "35%",
+    right: "20%",
+    rotate: 3,
+    size: 56,
+  },
+  {
+    src: mongoDBIcon,
+    alt: "mongodb",
+    top: "60%",
+    right: "10%",
+    rotate: 15,
+    size: 64,
+  },
+  {
+    src: javascriptIcon,
+    alt: "javascript",
+    top: "75%",
+    right: "22%",
+    rotate: 20,
+    size: 56,
+  },
+  {
+    src: swaggerIcon,
+    alt: "swagger",
+    top: "20%",
+    right: "28%",
+    rotate: -20,
+    size: 48,
+  },
+  { src: gitIcon, alt: "git", top: "50%", right: "28%", rotate: -8, size: 60 },
 ];
 
 export default function Homepage() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const socialMedia = [
-    { icon: githubIcon, alt: "Github icon", link: "https://github.com/ZubalYana" },
-    { icon: telegramIcon, alt: "Telegram icon", link: "https://t.me/yanavesq#" },
-    { icon: instIcon, alt: "Instagram icon", link: "https://www.instagram.com/yanavesq/" },
+    {
+      icon: githubIcon,
+      alt: "Github icon",
+      link: "https://github.com/ZubalYana",
+    },
+    {
+      icon: telegramIcon,
+      alt: "Telegram icon",
+      link: "https://t.me/yanavesq#",
+    },
+    {
+      icon: instIcon,
+      alt: "Instagram icon",
+      link: "https://www.instagram.com/yanavesq/",
+    },
   ];
 
   return (
@@ -72,7 +200,9 @@ export default function Homepage() {
       <div className="lg:hidden relative z-10 h-full flex flex-col">
         <div
           className="z-50 absolute top-[20px] right-[20px] w-[24px] h-[16px] flex flex-col cursor-pointer justify-between"
-          onClick={() => { setMobileNavOpen(true) }}
+          onClick={() => {
+            setMobileNavOpen(true);
+          }}
         >
           <div className="w-full h-[2px] rounded-[10px] bg-[#F5F5F5]/45 transition-all duration-200 "></div>
           <div className="w-full h-[2px] rounded-[10px] bg-[#F5F5F5]/45 transition-all duration-200 "></div>
@@ -103,7 +233,10 @@ export default function Homepage() {
             src={portfolioPhoto}
             alt="portfolio photo"
             className="h-[80%] w-auto object-cover object-top absolute"
-            style={{ maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 60%, transparent 100%)",
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
@@ -129,8 +262,18 @@ export default function Homepage() {
 
             <div className="flex gap-x-6">
               {socialMedia.map((media, index) => (
-                <a href={media.link} key={index} target="_blank" rel="noreferrer" className="w-[28px] h-[28px]">
-                  <img src={media.icon} alt={media.alt} className="w-full h-full icon-hover" />
+                <a
+                  href={media.link}
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[28px] h-[28px]"
+                >
+                  <img
+                    src={media.icon}
+                    alt={media.alt}
+                    className="w-full h-full icon-hover"
+                  />
                 </a>
               ))}
             </div>
@@ -138,7 +281,12 @@ export default function Homepage() {
         </div>
 
         {mobileNavOpen && (
-          <motion.div className="w-full h-screen fixed flex justify-center items-center bg-[#121212]/70 z-50" onClick={() => { setMobileNavOpen(false) }}>
+          <motion.div
+            className="w-full h-screen fixed flex justify-center items-center bg-[#121212]/70 z-50"
+            onClick={() => {
+              setMobileNavOpen(false);
+            }}
+          >
             <MobileNav onClose={() => setMobileNavOpen(false)} />
           </motion.div>
         )}
@@ -148,7 +296,6 @@ export default function Homepage() {
         <Navigation />
 
         <div className="w-full flex-1 relative flex justify-center items-center overflow-hidden">
-
           <motion.div
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
             initial={{ opacity: 0 }}
@@ -172,17 +319,19 @@ export default function Homepage() {
             ))}
           </motion.div>
 
-          <div className="relative w-[350px] h-[515px] z-10 overflow-hidden">
+          <div className="relative w-[350px] h-[500px] z-10 overflow-hidden">
             <motion.img
               src={portfolioPhoto}
               alt="portfolio photo"
-              className="w-full h-full opacity-[0.9] object-cover"
+              className="w-full h-full opacity-[0.9] object-cover object-top"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
               style={{
-                WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-                maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)"
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, black 60%, transparent 100%)",
+                maskImage:
+                  "linear-gradient(to bottom, black 60%, transparent 100%)",
               }}
             />
           </div>
@@ -205,21 +354,26 @@ export default function Homepage() {
             </div>
             <div className="md:w-[33%] flex justify-end items-end gap-x-6">
               {socialMedia.map((media, index) => (
-                <a href={media.link} key={index} target="_blank" rel="noreferrer" className="w-[30px] h-[30px] cursor-pointer">
-                  <img src={media.icon} alt={media.alt} className="w-full h-full icon-hover" />
+                <a
+                  href={media.link}
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[30px] h-[30px] cursor-pointer"
+                >
+                  <img
+                    src={media.icon}
+                    alt={media.alt}
+                    className="w-full h-full icon-hover"
+                  />
                 </a>
               ))}
             </div>
 
             <div className="3xl:hidden w-full absolute bottom-0 h-[20%] bg-gradient-to-t from-[#121212] to-transparent pointer-events-none z-10" />
           </motion.div>
-
-
         </div>
-
-
       </div>
     </div>
   );
 }
-
