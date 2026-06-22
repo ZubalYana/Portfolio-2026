@@ -165,7 +165,7 @@ export interface project {
 
 export default function Projects() {
   return (
-    <div className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-hidden">
+    <div className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-x-clip">
       <a
         href="/"
         className="absolute top-[20px] left-[20px] lg:top-[40px] lg:left-[40px] z-50"
@@ -195,7 +195,7 @@ export default function Projects() {
       >
         Projects<span className="text-[#008CFF]">.</span>
       </motion.h1>
-      <div className="w-full flex flex-col mt-8 gap-y-20 z-10 overflow-hidden">
+      <div className="w-full flex flex-col mt-8 gap-y-20 z-10">
         {projects.map((project, index) => (
           <ExtendedProjectCard project={project} key={index} />
         ))}
