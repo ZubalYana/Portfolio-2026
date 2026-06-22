@@ -38,7 +38,7 @@ function LanguageBar({ language, level, fillingPercantage, index }: {
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-screen min-h-screen 3xl:min-h-[800px] flex flex-col items-center p-[20px] lg:p-[40px] relative z-10 relative">
+    <section id="about" className="w-full flex flex-col items-center py-[80px] px-[20px] lg:px-[40px] relative z-10 overflow-hidden">
 
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -50,7 +50,7 @@ export default function AboutMe() {
         About me<span className="text-[#008CFF]">.</span>
       </motion.h1>
 
-      <div className="w-full flex-1 flex flex-col md:flex-row gap-x-6 mt-4">
+      <div className="w-full flex-1 flex flex-col md:flex-row gap-x-6 mt-8">
 
         <motion.div
           className="w-full md:max-w-[30%]"
@@ -67,7 +67,7 @@ export default function AboutMe() {
         </motion.div>
 
         <motion.div
-          className="w-full md:max-w-[70%] pt-4"
+          className="w-full md:max-w-[70%] pt-4 md:pt-0"
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function AboutMe() {
               </div>
             </div>
 
-            <div className="w-full md:w-[50%] flex flex-col">
+            <div className="w-full md:w-[50%] flex flex-col mt-6 md:mt-0">
               <div className="flex gap-x-3 items-center">
                 <div className="w-[35px] h-[35px] p-2 rounded-[8px] bg-[#008CFF]/20">
                   <Code2Icon className="w-full h-full text-[#008CFF]" />
@@ -121,24 +121,25 @@ export default function AboutMe() {
               <div className="w-full flex flex-col text-left gap-y-1 mt-2">
                 <p className="font-light text-[12px] text-[#F5F5F5]/80">
                   <span className="font-semibold text-[#F5F5F5]">2025-2026: </span>Freelance projects within{" "}
-                  <a className="text-[#008CFF] cursor-pointer" href="https://creator-it-academy.com/">Creator IT Academy</a>
+                  <a className="text-[#008CFF] cursor-pointer" href="https://creator-it-academy.com/" target="_blank" rel="noreferrer">Creator IT Academy</a>
                 </p>
                 <p className="font-light text-[12px] text-[#F5F5F5]/80">
                   <span className="font-semibold text-[#F5F5F5]">2025-present: </span>Part-time cooperation with{" "}
-                  <a className="text-[#008CFF] cursor-pointer" href="https://koloda.shop/">Koloda Shop</a>
+                  <a className="text-[#008CFF] cursor-pointer" href="https://koloda.shop/" target="_blank" rel="noreferrer">Koloda Shop</a>
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="w-full flex flex-col mt-6 md:mt-4">
+          <div className="w-full flex flex-col mt-6 md:mt-6">
             <div className="flex gap-x-3 items-center">
               <div className="w-[35px] h-[35px] p-2 rounded-[8px] bg-[#008CFF]/20">
                 <Globe className="w-full h-full text-[#008CFF]" />
               </div>
               <h5 className="uppercase font-medium text-[16px]">Languages</h5>
             </div>
-            <div className="w-full flex flex-col flex-wrap md:flex-nowrap md:flex-row md:gap-x-6 mt-4">
+            {/* FIXED: Simplified flex classes to prevent wrapping issues */}
+            <div className="w-full flex flex-col gap-y-4 md:flex-row md:gap-x-6 mt-4">
               {languages.map((lang, index) => (
                 <LanguageBar key={index} {...lang} index={index} />
               ))}
@@ -147,6 +148,7 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
+
       <BackgroundGlow width={600} height={500} opacity={0.15} top={-100} left={-150} />
       <BackgroundGlow width={1200} height={800} opacity={0.1} right={-280} bottom={-180} />
     </section>

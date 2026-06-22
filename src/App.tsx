@@ -20,11 +20,11 @@ function App() {
               <AboutMe />
               <FeaturedProjects />
               <Skills />
-              <FAQ/>
+              <FAQ />
             </div>
           }
         />
-        <Route path="/projects" element={<Projects/>} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </>
