@@ -7,7 +7,6 @@ import Skills from "./components/screens/Skills";
 import Footer from "./components/screens/Footer";
 import Projects from "./components/screens/Projects";
 import FAQ from "./components/screens/FAQ";
-import PageGlow from "./components/decorations/PageGlow";
 
 function App() {
   return (
@@ -16,13 +15,13 @@ function App() {
         <Route
           path="/"
           element={
-            <PageGlow>
+            <div className="overflow-x-hidden">
               <Homepage />
               <AboutMe />
               <FeaturedProjects />
               <Skills />
               <FAQ />
-            </PageGlow>
+            </div>
           }
         />
         <Route path="/projects" element={<Projects />} />
