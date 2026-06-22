@@ -6,8 +6,8 @@ import BackgroundGlow from "../decorations/BackgroundGlow";
 
 const languages = [
   { language: "Ukrainian", level: "Native", fillingPercantage: 90 },
-  { language: "English",   level: "C1",     fillingPercantage: 75 },
-  { language: "French",    level: "A2+",    fillingPercantage: 30 },
+  { language: "English", level: "C1", fillingPercantage: 75 },
+  { language: "French", level: "A2+", fillingPercantage: 30 },
 ];
 
 function LanguageBar({ language, level, fillingPercantage, index }: {
@@ -38,7 +38,7 @@ function LanguageBar({ language, level, fillingPercantage, index }: {
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-screen min-h-screen flex flex-col items-center p-[20px] lg:p-[40px] relative z-10 relative">
+    <section id="about" className="w-screen min-h-screen 3xl:min-h-[800px] flex flex-col items-center p-[20px] lg:p-[40px] relative z-10 relative">
 
       <motion.h1
         className="uppercase font-bold text-[32px]"
@@ -147,8 +147,8 @@ export default function AboutMe() {
 
         </motion.div>
       </div>
-      <BackgroundGlow width={600} height={500} opacity={0.15} top={-100} left={-150}/>
-      <BackgroundGlow width={1200} height={800} opacity={0.1} right={-280} bottom={-180}/>
+      <BackgroundGlow width={600} height={500} opacity={0.15} top={-100} left={-150} />
+      <BackgroundGlow width={1200} height={800} opacity={0.1} right={-280} bottom={-180} />
     </section>
   );
 }
